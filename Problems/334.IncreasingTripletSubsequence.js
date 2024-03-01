@@ -20,13 +20,13 @@
 
 var increasingTriplet = function(nums) {
     let first = Infinity
-    let second =Infinity
-    for(let j=0;j<nums.length;j++){
-        if(nums[j]<= first){
-            first =nums[j]
-        } else if (nums[j] <= second){
-            second =nums[j]
-        }else{
+    let second = Infinity
+    for (let j=0; j < nums.length;j++) {
+        if (nums[j]<= first){
+            first = nums[j]
+        } else if (nums[j] <= second) {
+            second = nums[j]
+        } else{
             return true
         }
     }

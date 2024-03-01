@@ -32,3 +32,5 @@ var increasingTriplet = function(nums) {
     }
     return false
 };
+
+//tesy

@@ -38,4 +38,4 @@ var maxOperations = function(nums, k) {
     }
 
     return res
-};
+};  

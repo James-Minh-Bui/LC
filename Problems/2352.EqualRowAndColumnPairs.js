@@ -20,8 +20,8 @@
 // - (Row 0, Column 0): [3,1,2,2]
 // - (Row 2, Column 2): [2,4,2,2]
 // - (Row 3, Column 2): [2,4,2,2]
- 
-var equalPairs = function(grid) {
+
+ var equalPairs = function(grid) {
 
     const n = grid.length
     let count = 0

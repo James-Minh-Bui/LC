@@ -24,25 +24,15 @@
 // Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 
 var reverseWords = function(s) {
-    s = s.trim()
-    const words = []
-    let curr = ""
-    for (let i = 0; i < s.length; i++) {
-       if (s[i] == ' ') {
-           if (curr !== "") {
-               words.push(curr)
-               curr = ""
-           }
-       } 
-       else {
-           curr += s[i]
-       } 
-       if (i == s.length-1) words.push(curr)
-    }
+    s = s.replace(/\s+/g,' ').trim()
+    let wordBank = s.split(' ')
     let result = ''
-    for (let i = words.length-1; i >= 0; i--) {
-        result += words[i]
-        if (i !== 0) result += ' '
+    while (wordBank.length > 0) {
+        if (wordBank.length === 1) {
+            result += wordBank.pop()
+        } else {
+            result += wordBank.pop() + ' '
+        }
     }
     return result
 };

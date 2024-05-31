@@ -31,9 +31,7 @@ var minReorder = function(n, connections) {
     const graph = new Array(n).fill(null).map(() => []);
     
     for (const [u, v] of connections) {
-        // Road from u to v
         graph[u].push([v, 1]);
-        // Reverse road from v to u
         graph[v].push([u, 0]);
     }
 
@@ -41,7 +39,6 @@ var minReorder = function(n, connections) {
         let changeCount = 0;
         for (const [neighbor, direction] of graph[node]) {
             if (neighbor !== parent) {
-                // Count the edges that need to be changed
                 changeCount += direction;
                 changeCount += dfs(neighbor, node);
             }
